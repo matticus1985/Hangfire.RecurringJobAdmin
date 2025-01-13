@@ -1,8 +1,9 @@
-﻿using Hangfire.RecurringJobAdmin;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Hangfire.RecurringJobAdminNext.Attributes;
+using Hangfire.RecurringJobAdminNext.Models;
 
 namespace Hangfire.JobExtensions.DotNetCore.Test
 {
@@ -16,7 +17,7 @@ namespace Hangfire.JobExtensions.DotNetCore.Test
             Console.WriteLine("Testing Console");
         }
 
-        [DisableConcurrentlyJobExecution("CheckFileExists", 0, 10, "It is not allowed to perform multiple same tasks.", jobState: JobState.FailedState)]
+        [DisableConcurrentJobExecution("CheckFileExists", 0, 10, "It is not allowed to perform multiple same tasks.", jobState: JobState.FailedState)]
         [RecurringJob("*/2 * * * *", "UTC", "default", RecurringJobId = "Check-File-Exists")]
         public void CheckFileExists()
         {

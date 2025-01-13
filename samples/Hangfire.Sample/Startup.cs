@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Hangfire.Common;
 using Hangfire.LiteDB;
-using Hangfire.RecurringJobAdmin;
+using Hangfire.RecurringJobAdminNext;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;

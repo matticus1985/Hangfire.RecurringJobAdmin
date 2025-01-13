@@ -1,0 +1,92 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    
+    <PropertyGroup>
+      <TargetFramework>netstandard2.0</TargetFramework>
+      <PlatformTarget>x64</PlatformTarget>
+      <PackageId>Hangfire.RecurringJobAdminNext</PackageId>
+    </PropertyGroup>
+
+    
+  <PropertyGroup>
+      <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+      <Authors>Matthijs Oomkens</Authors>
+      <Copyright>Copyright © 2020-present Hangfire.Extension contributors</Copyright>
+      <NeutralLanguage>en</NeutralLanguage>
+      <PackageProjectUrl>https://github.com/matticus1985/Hangfire.RecurringJobAdminNext</PackageProjectUrl>
+      <RepositoryUrl>https://github.com/matticus1985/Hangfire.RecurringJobAdminNext</RepositoryUrl>
+      <Version>1.0.6</Version>
+      <PackOnBuild>true</PackOnBuild>
+      <Description>A dashboard to manage Hangfire's recurring jobs.</Description>
+      <RootNamespace>Hangfire.RecurringJobAdminNext</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Dashboard\Content\css\cron-expression-input.css" />
+    <None Remove="Dashboard\Content\css\JobExtension.css" />
+    <None Remove="Dashboard\Content\js\axios.min.js" />
+    <None Remove="Dashboard\Content\js\cron-expression-input.js" />
+    <None Remove="Dashboard\Content\js\daysjs.min.js" />
+    <None Remove="Dashboard\Content\js\jobextension.js" />
+    <None Remove="Dashboard\Content\js\relativeTime.min.js" />
+    <None Remove="Dashboard\Content\js\sweetalert.js" />
+    <None Remove="Dashboard\Content\js\vue.js" />
+    <None Remove="Dashboard\Content\js\vuejs-paginate.js" />
+    <None Remove="Dashboard\JobExtension.html" />
+    <None Remove="Dashboard\JobsStopped.html" />
+    <None Update="README.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Dashboard\Content\css\cron-expression-input.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Content\css\JobExtension.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Content\js\axios.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Content\js\cron-expression-input.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Content\js\relativeTime.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Content\js\jobextension.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Content\js\daysjs.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Content\js\sweetalert.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Content\js\vuejs-paginate.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Content\js\vue.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\JobsStopped.html" />
+    <EmbeddedResource Include="Dashboard\JobExtension.html" />
+  </ItemGroup>
+
+  <!--<ItemGroup>
+    <Compile Remove="Dashboard\Content\css\**" />
+    <Compile Remove="Dashboard\Content\js\**" />
+    <EmbeddedResource Remove="Dashboard\Content\css\**" />
+    <EmbeddedResource Remove="Dashboard\Content\js\**" />
+    <None Remove="Dashboard\Content\css\**" />
+    <None Remove="Dashboard\Content\js\**" />
+  </ItemGroup>-->
+
+
+  <ItemGroup>
+    <PackageReference Include="Cronos" Version="0.7.0" />
+    <PackageReference Include="HangFire.Core" Version="1.7.6" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+  </ItemGroup>
+
+</Project>

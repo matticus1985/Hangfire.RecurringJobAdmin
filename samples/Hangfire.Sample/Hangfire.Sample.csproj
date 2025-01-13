@@ -29,7 +29,7 @@
   
   <ItemGroup>
     <ProjectReference Include="..\Hangfire.Sample.Library\Hangfire.Sample.Library.csproj" />
-    <ProjectReference Include="..\..\src\Hangfire.RecurringJobAdmin\Hangfire.RecurringJobAdmin.csproj" />
+    <ProjectReference Include="..\..\src\Hangfire.RecurringJobAdminNext\Hangfire.RecurringJobAdminNext.csproj" />
   </ItemGroup>
 
 </Project>
